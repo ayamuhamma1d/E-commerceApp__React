@@ -5,9 +5,7 @@ export const NotFoundPage = () => {
         <>
             <div className="container py-5">
                 <img src={img} />
-            
             </div>
-
         </>
     )
 }

@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Rating from "react-rating-stars-component";
-
 function ProductDetails() {
     const { id } = useParams();
     const [prodDetails, setProdDetails] = useState(null);
     const [loading, setLoading] = useState(true);
     const getDetails = () => {
-
         return fetch(`https://fakestoreapi.com/products/${id}`)
             .then((res) => res.json())
             .then((json) => {
@@ -18,14 +16,14 @@ function ProductDetails() {
                 setLoading(false);
             });
     };
-
     useEffect(() => {
         getDetails();
     }, []);
-
     return (
         <>
-            {loading ? (<p>Loading...</p>) : prodDetails ? (
+            {loading ? (<div className="container py-5 text-center vh-100 d-flex justify-content-center align-items-center">
+                <span class="loader"></span>
+            </div>) : prodDetails ? (
                 <div className="container py-5 my-5">
                     <div className="row">
                         <>
@@ -34,7 +32,7 @@ function ProductDetails() {
                                     src={prodDetails.image}
                                     alt=""
                                     className=" img-fluid"
-                                    
+
                                 />
                             </div>
                             <div className=" offset-lg-1 col-md-6 ">
@@ -42,7 +40,7 @@ function ProductDetails() {
                                 <p className="text-muted">{prodDetails.category}</p>
                                 <h5>
                                     <span >
-                                 EGP </span>
+                                        EGP </span>
                                     {prodDetails.price}
                                 </h5>
                                 {prodDetails.rating && (
@@ -65,9 +63,5 @@ function ProductDetails() {
         </>
     );
 }
-
 export default ProductDetails;
 
-{
-
-}

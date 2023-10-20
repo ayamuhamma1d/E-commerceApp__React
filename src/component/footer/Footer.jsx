@@ -1,5 +1,4 @@
 import React from 'react'
-
 const Footer = () => {
     return (
         <>
@@ -38,7 +37,6 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div className="container-fluid">
                     <div className="row bg-copyright ">
@@ -46,14 +44,11 @@ const Footer = () => {
                             <div className="text-center py-3 d-flex justify-content-center align-items-center ">
                                 <small>Copyright © Your Website 2021</small>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </footer>
-
         </>
     )
 }
-
 export default Footer

@@ -17,10 +17,8 @@ const NavBar = () => {
             </Nav>
           </Navbar.Collapse>
         </div>
-
       </Navbar>
     </>
   )
 }
-
 export default NavBar

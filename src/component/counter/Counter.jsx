@@ -1,25 +1,24 @@
 import React, { useState } from 'react'
-
 const Counter = () => {
-  const [counter,setCounter]=useState(0);
-  const increaseCount=()=>{
-  setCounter(counter+1);
+  const [counter, setCounter] = useState(0);
+  const increaseCount = () => {
+    setCounter(counter + 1);
   }
-  const decreaseCount=()=>{
+  const decreaseCount = () => {
     if (counter > 0) {
-  setCounter(counter-1);
+      setCounter(counter - 1);
     }
   }
   return (
-   <>  
-<div className="container py-5 ">
-<div className=" d-flex justify-content-center align-items-center ">
-  <button className='btn btn-warning me-5 px-4' onClick={increaseCount}>+</button>
-    <h1 className='mb-0'>{counter}</h1>
-    <button className='btn btn-warning ms-5  px-4' onClick={decreaseCount}>-</button>
-  </div>
-</div>
-   </>
+    <>
+      <div className="container py-5 ">
+        <div className=" d-flex justify-content-center align-items-center ">
+          <button className='btn btn-warning me-5 px-4' onClick={increaseCount}>+</button>
+          <h1 className='mb-0'>{counter}</h1>
+          <button className='btn btn-warning ms-5  px-4' onClick={decreaseCount}>-</button>
+        </div>
+      </div>
+    </>
   )
 }
 
