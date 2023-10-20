@@ -11,7 +11,7 @@ const Counter = () => {
   }
   return (
     <>
-      <div className="container py-5 ">
+      <div className="container vh-100 d-flex justify-content-center align-items-center">
         <div className=" d-flex justify-content-center align-items-center ">
           <button className='btn btn-warning me-5 px-4' onClick={increaseCount}>+</button>
           <h1 className='mb-0'>{counter}</h1>
