@@ -9,6 +9,8 @@ test('render increase  Btn ', () => {
     render(<Counter />);
     const IncreaseBtn = screen.getByRole('button', { name: '+' })
     expect(IncreaseBtn).toBeInTheDocument();
+    expect(IncreaseBtn).toBeEnabled();
+
 });
 test('render Counter value  when click increase btn ', () => {
     render(<Counter />);
@@ -16,6 +18,7 @@ test('render Counter value  when click increase btn ', () => {
     expect(counterValue).toBeInTheDocument();
     const IncreaseBtn = screen.getByRole('button', { name: '+' })
     expect(IncreaseBtn).toBeInTheDocument();
+    expect(IncreaseBtn).toBeEnabled();
     fireEvent.click(IncreaseBtn);
     expect(counterValue).toHaveTextContent('1')
 });
@@ -23,7 +26,8 @@ test('render decrease Btn', () => {
     render(<Counter />);
     const decreaseBtn = screen.getByRole('button', { name: '-' })
     expect(decreaseBtn).toBeInTheDocument();
- 
+    expect(decreaseBtn).toBeEnabled();
+
 });
 test('render counter value  when click on decrease btn ', () => {
     render(<Counter />);
@@ -31,6 +35,8 @@ test('render counter value  when click on decrease btn ', () => {
     expect(counterValue).toBeInTheDocument('0');
     const decreaseBtn = screen.getByRole('button', { name: '-' })
     expect(decreaseBtn).toBeInTheDocument();
+    expect(decreaseBtn).toBeEnabled();
+
     fireEvent.click(decreaseBtn);
     expect(counterValue).toHaveTextContent('0')
 });
