@@ -9,7 +9,13 @@ function Loading({loading ,error ,children}) {
        </div>)
   }
     if(error){
-    return <p>{error.message}</p>
+    return(
+      <>
+      <div className="container py-5">
+      <p className="alert alert-danger my-5">{error.message}</p>
+      </div>
+      </>
+    )
     }
     return  <div>{children}</div> ;
 }
