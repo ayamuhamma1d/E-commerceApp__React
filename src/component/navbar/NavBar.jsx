@@ -14,6 +14,8 @@ const NavBar = () => {
             <Nav className="ms-auto">
               <NavLink to="/" className='px-2 text-decoration-none text-white'>Home</NavLink>
               <NavLink to="/counter" className='px-2 text-decoration-none text-white '>counter</NavLink>
+              <NavLink to="/login" className='px-2 text-decoration-none text-white '>Log in</NavLink>
+              <NavLink to="/signup" className='px-2 text-decoration-none text-white '>Sign up</NavLink>
             </Nav>
           </Navbar.Collapse>
         </div>
