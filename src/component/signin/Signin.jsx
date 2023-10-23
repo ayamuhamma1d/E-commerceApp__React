@@ -7,7 +7,6 @@ function Signin() {
     const onFormSubmit = (data) => {
         console.log(data);
     }
-
     return (
         <div className="container py-5">
             <Form className='w-50 mx-auto bg-white p-5 mt-5 ' onSubmit={handleSubmit(onFormSubmit)}>
